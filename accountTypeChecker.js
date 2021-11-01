@@ -1,4 +1,4 @@
-let accountBalanceHistory;
+// let accountBalanceHistory;
 //[
 //     {
 //         monthNumber: 0, // current month
