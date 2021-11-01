@@ -1,4 +1,5 @@
-// const accountBalanceHistory = [
+let accountBalanceHistory;
+//[
 //     {
 //         monthNumber: 0, // current month
 //         account: {
@@ -31,8 +32,11 @@ const accountTypeChecker = (accountBalanceHistory) => {
     ***/
 
     // result to store difference between the values to check type
-    let resultSet = new Set();
+    if (!accountBalanceHistory || accountBalanceHistory.length === 0) {
+        return null;
+    }
 
+    let resultSet = new Set();
     // sort the input acording to the month number
     accountBalanceHistory.sort((a, b) => {
         return b.monthNumber - a.monthNumber;

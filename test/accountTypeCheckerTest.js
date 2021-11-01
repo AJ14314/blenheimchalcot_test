@@ -54,6 +54,14 @@ describe('checking account type', () => {
             const result = typeChecker(input);
             expect(result).to.equal('A');
         });
+        it('should return null', () => {
+            const result = typeChecker([]);
+            expect(result).to.equal(null);
+        });
+        it('should return null', () => {
+            const result = typeChecker();
+            expect(result).to.equal(null);
+        });
     });
 
 });

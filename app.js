@@ -26,8 +26,8 @@ app.get('/', (req, res) => {
 });
 // calling post method
 app.post('/api/checkaccounttype', (req, res) => {
-
-    if (req.body.length > 0)
+    console.log(req.body.length);
+    if (req.body && req.body.length > 0)
         res.status(200).send(`The account type is ${typeChecker(req.body)}`);
     else
         res.status(204).send('No Input data');
