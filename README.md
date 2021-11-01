@@ -2,12 +2,13 @@
 Coding problem of blenheimchalcot
 
 ## Installation
-1. Download the application from github.
-2. Open command prompt or terminal, where project is downloded.
-3. Type "npm install", after that type "npm run".
-4. Open any API platform tool and type http://localhost:3000/ and method type as GET.
-5. If you see Hello World, then the code is working.
-6. To test account type check feature type http://localhost:3000/api/checkaccounttype and method type as POST along with the in the below format.
+1. Make sure node.js v12+ is installed on your system.
+2. Download the application from github.
+3. Open command prompt or terminal, where project is downloded.
+4. Type "npm install", after that type "npm run".
+5. Open any API platform tool and type http://localhost:3000/ and method type as GET.
+6. If you see Hello World, then the code is working.
+7. To test account type check feature type http://localhost:3000/api/checkaccounttype and method type as POST along with the in the below format.
 [
   {
     "monthNumber": 0,
@@ -35,7 +36,7 @@ Coding problem of blenheimchalcot
   }
 ]
 
-7. The result will be displayed based on the input provided.
+8. The result will be displayed based on the input provided.
 
 
 ## Logic Explanation
