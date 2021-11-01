@@ -1,23 +1,24 @@
-const accountBalanceHistory = [
-    {
-        monthNumber: 0, // current month
-        account: {
-            balance: { amount: 0 },
-        },
-    },
-    {
-        monthNumber: 1, // last month
-        account: {
-            balance: { amount: 100 },
-        },
-    },
-    {
-        monthNumber: 2, // two months ago
-        account: {
-            balance: { amount: 200 },
-        },
-    }
-]
+// const accountBalanceHistory = [
+//     {
+//         monthNumber: 0, // current month
+//         account: {
+//             balance: { amount: 0 },
+//         },
+//     },
+//     {
+//         monthNumber: 1, // last month
+//         account: {
+//             balance: { amount: 100 },
+//         },
+//     },
+//     {
+//         monthNumber: 2, // two months ago
+//         account: {
+//             balance: { amount: 200 },
+//         },
+//     }
+// ]
+
 
 const accountTypeChecker = (accountBalanceHistory) => {
     /***
@@ -29,14 +30,17 @@ const accountTypeChecker = (accountBalanceHistory) => {
     Type 🅱 is one where the balance amount changes by the same amount each month.
     ***/
 
-    // Write your logic here  - No pressure 😁 //
+    // result to store difference between the values to check type
     let resultSet = new Set();
+
+    // sort the input acording to the month number
     accountBalanceHistory.sort((a, b) => {
         return b.monthNumber - a.monthNumber;
     })
+
+    // to store differnce of amounts
     let amountArray = [];
     accountBalanceHistory.forEach(element => {
-
         amountArray.push(element.account.balance.amount);
     });
 
@@ -44,12 +48,12 @@ const accountTypeChecker = (accountBalanceHistory) => {
         let diff = amountArray[i] - amountArray[i + 1];
         resultSet.add(diff);
     }
-
+    // if size of the set is 1 means constant difference between the amounts
     let result = resultSet.size;
 
     return result === 1 ? "B" : "A";
 };
 
-console.log(accountTypeChecker(accountBalanceHistory));
+//console.log(accountTypeChecker(accountBalanceHistory));
 
 module.exports = accountTypeChecker;
